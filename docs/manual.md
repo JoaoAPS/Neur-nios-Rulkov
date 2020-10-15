@@ -189,8 +189,6 @@ Default = false
 
 # EXEMPLO DE CÓDIGOS
 
-## TODO: Outros exemplos
-
 #### - Exemplo de código com sinal externo:
 ```c++
 //#includes
@@ -200,20 +198,20 @@ Default = false
 #define FRACAO_AFETADOS_SINAL 0.2	//20% dos neurônios serão afetados
 
 //Struct com os parâmetros do sinal (deve ser altera conforme o sinal desejado)
-struct StrParametros {
+struct ParametrosSinal {
 	double frequencia, amplitude;
 };
 
 //Função de um sinal cossenoidal (deve ser altera conforme o sinal desejado)
-void funcSinal(float &x, float &y, int n, void *p) {
-	StrParametros *param = (StrParametros*) p;
+void funcSinal(double &x, double &y, int n, void *p) {
+	ParametrosSinal *param = (ParametrosSinal*) p;
 
 	x += param->amplitude * cos( param->frequencia * n);
 }
 
 int main() {
 	//Cria um struct com os parâmetros
-	StrParametos param;
+	ParametrosSinal param;
 	param.frequencia = 0.001;
 	param.amplitude = 0.01;
 

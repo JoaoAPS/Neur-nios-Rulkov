@@ -33,7 +33,7 @@ void SinalExterno::setAfetados(uint numNeurons, double fracAfetados, int *chosen
 	uint i, j;
 
 	//Checagem de Erro
-	if (m_numAfetados > numNeurons || m_numAfetados < 0) {
+    if (fracAfetados > 1.0 || fracAfetados < 0.0) {
         Log::Error("Fração de neuronios afetados inválida: ", m_fracAfetados);
         exit(1);
     }
