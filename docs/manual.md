@@ -216,7 +216,7 @@ int main() {
 	param.amplitude = 0.01;
 
 	//Escolhe os 20% primeiros neuronios para ser afetados (pode ser altera conforme o sinal desejado)
-	int neuronsAfetados[FRACAO_AFETADOS_SINAL * N];
+	int neuronsAfetados[(int)round(FRACAO_AFETADOS_SINAL * N)];
 	for (int i=0; i < FRACAO_AFETADOS_SINAL * N; i++)
 		neuronsAfetados[i] = i;
 

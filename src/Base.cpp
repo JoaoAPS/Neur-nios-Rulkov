@@ -2041,12 +2041,12 @@ void RedeBase::setCalc(enum Grandeza::Grandeza grandEnum, bool shouldCalc) {
 }
 
 void RedeBase::ligarSinal() { 
-    m_hasExternalSignal = true;
-
     if (!m_sinal->isSet()) {
         Log::Error("Sinal externo ligado sem ser settado!");
         exit(1);
     }
+
+    m_hasExternalSignal = true;
 }
 
 

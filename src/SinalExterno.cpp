@@ -41,7 +41,7 @@ void SinalExterno::setAfetados(uint numNeurons, double fracAfetados, int *chosen
 
     //Salva informações na classe
 	m_fracAfetados = fracAfetados;
-	m_numAfetados = (uint)(fracAfetados * numNeurons);
+	m_numAfetados = (uint)round(fracAfetados * numNeurons);
 
 	//(Re)Aloca vetor
     if (m_afetados != NULL)
